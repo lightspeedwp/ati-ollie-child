@@ -1,17 +1,17 @@
 /*
-Theme Name: Go Africa Ollie Child
-Theme URI: 
-Author: LightSpeedWP
-Author URI: 
-Description: A child theme of the Ollie theme for GoAfrica.nl
+Theme Name: ATI Holidays Ollie Child
+Theme URI: https://github.com/lightspeedwp/ati-ollie-child
+Author: LightSpeed
+Author URI: https://lightspeedwp.agency/
+Description: Block child theme for ATI Holidays, built on the Ollie parent theme and preserving ATI's existing visual identity through theme.json design tokens.
 Requires at least: 6.9
 Tested up to: 6.9
 Requires PHP: 5.7
-Version: 
+Version: 0.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: ollie
-Text Domain: go-africa-ollie-child
+Text Domain: ati-ollie-child
 Tags: 
 */
 
@@ -246,7 +246,7 @@ Tags:
 
 .is-style-footer-nav .wp-block-navigation-item__content:hover,
 .is-style-footer-nav .wp-block-navigation-item__content:focus-visible {
-	color: var(--wp--preset--color--primary-alt);
+	color: var(--wp--preset--color--primary);
 	text-decoration: none;
 }
 
@@ -264,13 +264,13 @@ Tags:
 
 .is-style-header-nav .wp-block-navigation-item__content:hover,
 .is-style-header-nav .wp-block-navigation-item__content:focus-visible {
-	color: var(--wp--preset--color--primary-alt-accent);
+	color: var(--wp--preset--color--primary-accent);
 	text-decoration: none;
 }
 
 .is-style-header-nav .current-menu-item>.wp-block-navigation-item__content,
 .is-style-header-nav .current-menu-ancestor>.wp-block-navigation-item__content {
-	color: var(--wp--preset--color--primary-alt);
+	color: var(--wp--preset--color--primary);
 	text-decoration: none !important;
 	cursor: default;
 }

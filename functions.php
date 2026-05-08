@@ -1,8 +1,8 @@
 <?php
 /**
- * GoAfrica Ollie Child Theme functions.
+ * ATI Holidays Ollie Child Theme functions.
  *
- * @package GoAfrica_Ollie_Child
+ * @package ATI_Ollie_Child
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,16 +12,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Enqueue front-end assets.
  */
-function goafrica_child_enqueue_scripts() {
+function ati_ollie_child_enqueue_scripts() {
 	wp_enqueue_style(
-		'goafrica-ollie-child',
+		'ati-ollie-child',
 		get_stylesheet_uri(),
 		array( 'ollie' ),
 		wp_get_theme()->get( 'Version' )
 	);
 
 	wp_enqueue_script(
-		'goafrica-faq-accordion',
+		'ati-faq-accordion',
 		get_stylesheet_directory_uri() . '/assets/js/faq-accordion.js',
 		array(),
 		wp_get_theme()->get( 'Version' ),
@@ -31,20 +31,20 @@ function goafrica_child_enqueue_scripts() {
 		)
 	);
 }
-add_action( 'wp_enqueue_scripts', 'goafrica_child_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'ati_ollie_child_enqueue_scripts' );
 
 /**
- * Split multi-link ga-button paragraph bindings into individual button items.
+ * Split multi-link ati-button paragraph bindings into individual button items.
  *
  * The post-connection binding renders connected posts as one comma-separated
- * HTML string. When the paragraph uses the GA Button style we convert that
+ * HTML string. When the paragraph uses the ATI Button style we convert that
  * list into link-only content so each destination can be styled as its own pill.
  *
  * @param string $block_content Rendered block content.
  * @param array  $block         Parsed block data.
  * @return string
  */
-function goafrica_child_render_ga_button_links( $block_content, $block ) {
+function ati_ollie_child_render_button_links( $block_content, $block ) {
 	if ( empty( $block_content ) || empty( $block['blockName'] ) || 'core/paragraph' !== $block['blockName'] ) {
 		return $block_content;
 	}
@@ -54,7 +54,7 @@ function goafrica_child_render_ga_button_links( $block_content, $block ) {
 		return $block_content;
 	}
 
-	if ( false === strpos( $block_content, 'is-style-ga-button' ) ) {
+	if ( false === strpos( $block_content, 'is-style-ati-button' ) ) {
 		return $block_content;
 	}
 
@@ -69,8 +69,8 @@ function goafrica_child_render_ga_button_links( $block_content, $block ) {
 		'/<p\b([^>]*)class="([^"]*)"([^>]*)>/i',
 		static function( $matches ) {
 			$classes = preg_split( '/\s+/', trim( $matches[2] ) );
-			if ( ! in_array( 'ga-button-links', $classes, true ) ) {
-				$classes[] = 'ga-button-links';
+			if ( ! in_array( 'ati-button-links', $classes, true ) ) {
+				$classes[] = 'ati-button-links';
 			}
 
 			return '<p' . $matches[1] . 'class="' . esc_attr( implode( ' ', array_filter( $classes ) ) ) . '"' . $matches[3] . '>';
@@ -90,25 +90,25 @@ function goafrica_child_render_ga_button_links( $block_content, $block ) {
 
 	return $block_content;
 }
-add_filter( 'render_block', 'goafrica_child_render_ga_button_links', 30, 2 );
+add_filter( 'render_block', 'ati_ollie_child_render_button_links', 30, 2 );
 
 /**
- * Render bound accommodation rating paragraphs as GA button star pills.
+ * Render bound accommodation rating paragraphs as ATI star pills.
  *
  * The Tour Operator plugin outputs PNG star images for the `rating` meta field.
- * When the paragraph uses the GA Button style we replace those images with
+ * When the paragraph uses the ATI Star Block style we replace those images with
  * inline star characters so the pill can inherit theme colors and spacing.
  *
  * @param string $block_content Rendered block content.
  * @param array  $block         Parsed block data.
  * @return string
  */
-function goafrica_child_render_ga_button_rating( $block_content, $block ) {
+function ati_ollie_child_render_rating_stars( $block_content, $block ) {
 	if ( empty( $block_content ) || empty( $block['blockName'] ) || 'core/paragraph' !== $block['blockName'] ) {
 		return $block_content;
 	}
 
-	if ( false === strpos( $block_content, 'is-style-ga-star-block' ) ) {
+	if ( false === strpos( $block_content, 'is-style-ati-star-block' ) ) {
 		return $block_content;
 	}
 
@@ -128,19 +128,19 @@ function goafrica_child_render_ga_button_rating( $block_content, $block ) {
 	$stars_markup = '';
 
 	for ( $index = 0; $index < $full_stars; $index++ ) {
-		$stars_markup .= '<span class="ga-rating-star" aria-hidden="true">&#9733;</span>';
+		$stars_markup .= '<span class="ati-rating-star" aria-hidden="true">&#9733;</span>';
 	}
 
 	for ( $index = 0; $index < $empty_stars; $index++ ) {
-		$stars_markup .= '<span class="ga-rating-star is-empty" aria-hidden="true">&#9733;</span>';
+		$stars_markup .= '<span class="ati-rating-star is-empty" aria-hidden="true">&#9733;</span>';
 	}
 
 	$block_content = preg_replace_callback(
 		'/<p\b([^>]*)class="([^"]*)"([^>]*)>/i',
 		static function( $matches ) {
 			$classes = preg_split( '/\s+/', trim( $matches[2] ) );
-			if ( ! in_array( 'ga-rating-stars', $classes, true ) ) {
-				$classes[] = 'ga-rating-stars';
+			if ( ! in_array( 'ati-rating-stars', $classes, true ) ) {
+				$classes[] = 'ati-rating-stars';
 			}
 
 			return '<p' . $matches[1] . 'class="' . esc_attr( implode( ' ', array_filter( $classes ) ) ) . '"' . $matches[3] . '>';
@@ -158,4 +158,4 @@ function goafrica_child_render_ga_button_rating( $block_content, $block ) {
 
 	return $block_content;
 }
-add_filter( 'render_block', 'goafrica_child_render_ga_button_rating', 35, 2 );
+add_filter( 'render_block', 'ati_ollie_child_render_rating_stars', 35, 2 );

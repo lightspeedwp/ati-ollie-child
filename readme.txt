@@ -1,4 +1,4 @@
-== go-africa-ollie-child ==
+== ati-ollie-child ==
 
 Contributors: LightSpeedWP
 Requires at least: 6.9
@@ -10,19 +10,19 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-A child theme of the Ollie theme for GoAfrica.nl
+Block child theme for ATI Holidays, built on the Ollie parent theme and preserving ATI's existing visual identity through theme.json design tokens.
 
 
 == Changelog ==
 
-= 1.0.0 =
-* Initial release
+= 0.1.0 =
+* Initial ATI Holidays retheme release
 
 
 == Copyright ==
 
-go-africa-ollie-child WordPress Theme, (C) 2026 LightSpeedWP
-go-africa-ollie-child is distributed under the terms of the GNU GPL.
+ati-ollie-child WordPress Theme, (C) 2026 LightSpeed
+ati-ollie-child is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -35,5 +35,5 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 
-go-africa-ollie-child is a child theme of Ollie (http://olliewp.com), (C) Mike McAlister, [GNU General Public License v3.0 (or later)](https://www.gnu.org/licenses/gpl-3.0.html)
+ati-ollie-child is a child theme of Ollie (http://olliewp.com), (C) Mike McAlister, [GNU General Public License v3.0 (or later)](https://www.gnu.org/licenses/gpl-3.0.html)
 
