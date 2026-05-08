@@ -1,0 +1,91 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails and metadata
+._*
+.Spotlight-V100
+.Trashes
+
+# Editors and IDEs
+.vscode/*
+!.vscode/mcp.json
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.iml
+
+# Logs and debug
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Node and frontend build outputs
+node_modules/
+bower_components/
+.npm/
+.pnpm-store/
+.yarn/
+.parcel-cache/
+.next/
+.nuxt/
+.svelte-kit/
+coverage/
+coverage-*/
+dist/
+build/
+.tmp/
+tmp/
+.cache/
+.eslintcache
+.stylelintcache
+
+# PHP and Composer
+vendor/
+composer.phar
+.phpunit.result.cache
+.phpstan/
+.psalm/
+
+# WordPress / wp-env / local runtime
+.wp-env.json
+.wp-env.override.json
+wordpress/
+wp/
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backups/
+
+# Archives and packaged artifacts
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+
+# Generated maps and minified assets (optional to keep source-driven workflow)
+*.min.css
+*.min.js
+*.map
+
+# Test artifacts
+playwright-report/
+test-results/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
