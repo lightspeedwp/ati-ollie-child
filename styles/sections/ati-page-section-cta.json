@@ -2,11 +2,11 @@
 	"$schema": "https://schemas.wp.org/wp/trunk/theme.json",
 	"version": 3,
 	"title": "Page Section CTA",
-	"slug": "ga-page-section-cta",
+	"slug": "ati-page-section-cta",
 	"blockTypes": [
 		"core/group"
 	],
-	"description": "CTA styling for page sections",
+	"description": "ATI CTA styling for page sections",
 	"styles": {
 		"color": {
 			"gradient": "linear-gradient(135deg, var(--wp--preset--color--primary) 0%, var(--wp--preset--color--primary-accent) 100%)",

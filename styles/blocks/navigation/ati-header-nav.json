@@ -1,15 +1,15 @@
 {
 	"$schema": "https://schemas.wp.org/wp/6.9/theme.json",
 	"version": 3,
-	"title": "GA Header Nav",
-	"slug": "ga-header-nav",
+	"title": "ATI Header Nav",
+	"slug": "ati-header-nav",
 	"blockTypes": [
 		"core/navigation"
 	],
-	"description": "Main header navigation links. Contrast text with semibold weight, hover and focus states change to primary color.",
+	"description": "Main header navigation links. Forum typeface, semibold weight; hover and active states use ATI primary and accent colours.",
 	"styles": {
 		"typography": {
-			"fontFamily": "var:preset|font-family|poppins"
+			"fontFamily": "var:preset|font-family|heading"
 		},
 		"elements": {
 			"link": {

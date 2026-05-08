@@ -2,92 +2,82 @@
 	"$schema": "https://schemas.wp.org/wp/trunk/theme.json",
 	"version": 3,
 	"settings": {
-    "layout": {
+		"layout": {
 			"contentSize": "800px",
 			"wideSize": "1320px"
 		},
 		"color": {
 			"palette": [
-        {
-          "name": "Primary",
-          "slug": "primary",
-          "color": "#1F4B3B"
-        },
-        {
-          "name": "Primary Accent",
-          "slug": "primary-accent",
-          "color": "#1A5D4A"
-        },
-        {
-          "name": "Primary Light",
-          "slug": "primary-light",
-          "color": "#1A5C4915"
-        },
-        {
-          "name": "Primary Alt",
-          "slug": "primary-alt",
-          "color": "#DD4611"
-        },
-        {
-          "name": "Primary Alt Accent",
-          "slug": "primary-alt-accent",
-          "color": "#BE3100"
-        },
-        {
-          "name": "Primary Alt Light",
-          "slug": "primary-alt-light",
-          "color": "#FFFBF5"
-        },
-        {
-          "name": "Main",
-          "slug": "main",
-          "color": "#231F20"
-        },
-        {
-          "name": "Main Accent",
-          "slug": "main-accent",
-          "color": "#DEDDDE"
-        },
-        {
-          "name": "Base",
-          "slug": "base",
-          "color": "#FFFFFF"
-        },
-        {
-          "name": "Secondary",
-          "slug": "secondary",
-          "color": "#5C5652"
-        },
-        {
-          "name": "Tertiary",
-          "slug": "tertiary",
-          "color": "#F8F7F3"
-        },
-        {
-          "name": "Border Light",
-          "slug": "border-light",
-          "color": "#E8E1D8"
-        },
-        {
-          "name": "Border Dark",
-          "slug": "border-dark",
-          "color": "#8E8479"
-        },
-        {
-          "name": "Support Gold",
-          "slug": "support-gold",
-          "color": "#BAAC2F"
-        },
-        {
-          "name": "Support Red",
-          "slug": "support-red",
-          "color": "#B92A02"
-        },
-        {
-          "name": "Support Sky",
-          "slug": "support-sky",
-          "color": "#BEDCF8"
-        }
+				{
+					"name": "Primary",
+					"slug": "primary",
+					"color": "#DBBD8D"
+				},
+				{
+					"name": "Primary Accent",
+					"slug": "primary-accent",
+					"color": "#AA653C"
+				},
+				{
+					"name": "Primary Light",
+					"slug": "primary-light",
+					"color": "#DBBD8D1A"
+				},
+				{
+					"name": "Main",
+					"slug": "main",
+					"color": "#231F20"
+				},
+				{
+					"name": "Main Accent",
+					"slug": "main-accent",
+					"color": "#DEDDDE"
+				},
+				{
+					"name": "Surface Dark",
+					"slug": "surface-dark",
+					"color": "#262423"
+				},
+				{
+					"name": "Base",
+					"slug": "base",
+					"color": "#FFFFFF"
+				},
+				{
+					"name": "Secondary",
+					"slug": "secondary",
+					"color": "#5C5652"
+				},
+				{
+					"name": "Tertiary",
+					"slug": "tertiary",
+					"color": "#F8F7F3"
+				},
+				{
+					"name": "Border Light",
+					"slug": "border-light",
+					"color": "#E8E1D8"
+				},
+				{
+					"name": "Border Dark",
+					"slug": "border-dark",
+					"color": "#8E8479"
+				},
+				{
+					"name": "Error",
+					"slug": "error",
+					"color": "#A94442"
+				},
+				{
+					"name": "Error Background",
+					"slug": "error-background",
+					"color": "#F2DEDE"
+				},
+				{
+					"name": "Error Border",
+					"slug": "error-border",
+					"color": "#EBCCD1"
+				}
 			]
 		},
 		"typography": {
@@ -95,140 +85,43 @@
 				{
 					"fontFace": [
 						{
-							"fontDisplay": "block",
-							"fontFamily": "Mona Sans",
-							"fontStretch": "75% 125%",
+							"fontDisplay": "swap",
+							"fontFamily": "Forum",
 							"fontStyle": "normal",
-							"fontWeight": "300 900",
+							"fontWeight": "400",
 							"src": [
-								"file:./assets/fonts/mona-sans/Mona-Sans.woff2"
+								"file:./assets/fonts/forum/Forum-Regular.woff2"
 							]
 						}
 					],
-					"fontFamily": "Mona Sans, sans-serif",
-					"name": "Mona Sans",
-					"slug": "primary"
+					"fontFamily": "\"Forum\", Georgia, serif",
+					"name": "Forum",
+					"slug": "body"
 				},
 				{
 					"fontFace": [
 						{
-							"fontDisplay": "block",
-							"fontFamily": "Mona Sans Expanded",
-							"fontStretch": "125%",
+							"fontDisplay": "swap",
+							"fontFamily": "Forum",
 							"fontStyle": "normal",
-							"fontWeight": "300 900",
+							"fontWeight": "400",
 							"src": [
-								"file:./assets/fonts/mona-sans/Mona-Sans.woff2"
+								"file:./assets/fonts/forum/Forum-Regular.woff2"
 							]
 						}
 					],
-					"fontFamily": "Mona Sans Expanded, sans-serif",
-					"name": "Mona Sans Expanded",
-					"slug": "expanded"
-				},
-				{
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Mona Sans Condensed",
-							"fontStretch": "94%",
-							"fontStyle": "normal",
-							"fontWeight": "300 900",
-							"src": [
-								"file:./assets/fonts/mona-sans/Mona-Sans.woff2"
-							]
-						}
-					],
-					"fontFamily": "Mona Sans Condensed, sans-serif",
-					"name": "Mona Sans Condensed",
-					"slug": "condensed"
-				},
-				{
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Mona Sans Narrow",
-							"fontStretch": "75%",
-							"fontStyle": "normal",
-							"fontWeight": "300 900",
-							"src": [
-								"file:./assets/fonts/mona-sans/Mona-Sans.woff2"
-							]
-						}
-					],
-					"fontFamily": "Mona Sans Narrow, sans-serif",
-					"name": "Mona Sans Narrow",
-					"slug": "narrow"
+					"fontFamily": "\"Forum\", Georgia, serif",
+					"name": "Forum Heading",
+					"slug": "heading"
 				},
 				{
 					"fontFamily": "monospace",
 					"name": "Monospace",
 					"slug": "monospace"
-				},
-				{
-					"fontFace": [
-						{
-							"fontFamily": "Poppins",
-							"fontStyle": "normal",
-							"fontWeight": "100",
-							"src": "https://goafrica-rebuild.lightspeedwp.dev/wp-content/uploads/fonts/pxiGyp8kv8JHgFVrLPTecnFBGPaTSQ.woff2"
-						},
-						{
-							"fontFamily": "Poppins",
-							"fontStyle": "normal",
-							"fontWeight": "200",
-							"src": "https://goafrica-rebuild.lightspeedwp.dev/wp-content/uploads/fonts/pxiByp8kv8JHgFVrLFj_V15vFP-KUEg.woff2"
-						},
-						{
-							"fontFamily": "Poppins",
-							"fontStyle": "normal",
-							"fontWeight": "300",
-							"src": "https://goafrica-rebuild.lightspeedwp.dev/wp-content/uploads/fonts/pxiByp8kv8JHgFVrLDz8V15vFP-KUEg.woff2"
-						},
-						{
-							"fontFamily": "Poppins",
-							"fontStyle": "normal",
-							"fontWeight": "400",
-							"src": "https://goafrica-rebuild.lightspeedwp.dev/wp-content/uploads/fonts/pxiEyp8kv8JHgFVrFJXUc1NECPY.woff2"
-						},
-						{
-							"fontFamily": "Poppins",
-							"fontStyle": "normal",
-							"fontWeight": "500",
-							"src": "https://goafrica-rebuild.lightspeedwp.dev/wp-content/uploads/fonts/pxiByp8kv8JHgFVrLGT9V15vFP-KUEg.woff2"
-						},
-						{
-							"fontFamily": "Poppins",
-							"fontStyle": "normal",
-							"fontWeight": "600",
-							"src": "https://goafrica-rebuild.lightspeedwp.dev/wp-content/uploads/fonts/pxiByp8kv8JHgFVrLEj6V15vFP-KUEg.woff2"
-						},
-						{
-							"fontFamily": "Poppins",
-							"fontStyle": "normal",
-							"fontWeight": "700",
-							"src": "https://goafrica-rebuild.lightspeedwp.dev/wp-content/uploads/fonts/pxiByp8kv8JHgFVrLCz7V15vFP-KUEg.woff2"
-						},
-						{
-							"fontFamily": "Poppins",
-							"fontStyle": "normal",
-							"fontWeight": "800",
-							"src": "https://goafrica-rebuild.lightspeedwp.dev/wp-content/uploads/fonts/pxiByp8kv8JHgFVrLDD4V15vFP-KUEg.woff2"
-						},
-						{
-							"fontFamily": "Poppins",
-							"fontStyle": "normal",
-							"fontWeight": "900",
-							"src": "https://goafrica-rebuild.lightspeedwp.dev/wp-content/uploads/fonts/pxiByp8kv8JHgFVrLBT5V15vFP-KUEg.woff2"
-						}
-					],
-					"fontFamily": "Poppins, sans-serif",
-					"name": "Poppins",
-					"slug": "poppins"
 				}
 			],
-      "fontSizes": [
-        {
+			"fontSizes": [
+				{
 					"fluid": {
 						"min": ".6rem",
 						"max": ".7rem"
@@ -237,7 +130,7 @@
 					"slug": "tiny",
 					"name": "Tiny"
 				},
-        {
+				{
 					"fluid": {
 						"min": ".825rem",
 						"max": ".95rem"
@@ -300,7 +193,7 @@
 					"slug": "xx-large",
 					"name": "Extra Extra Large"
 				},
-        {
+				{
 					"fluid": {
 						"min": "2.5rem",
 						"max": "5rem"
@@ -309,590 +202,601 @@
 					"slug": "gigantic",
 					"name": "Gigantic"
 				}
-      ]
+			]
 		}
 	},
 	"styles": {
 		"elements": {
-      "paragraph": {
-        "typography": {
-          "fontSize": "var(--wp--preset--font-size--base)",
-          "fontWeight": "400"
-        },
-        "color": {
-          "text": "var(--wp--preset--color--main)"
-        }
-      },
+			"paragraph": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--base)",
+					"fontWeight": "400"
+				},
+				"color": {
+					"text": "var(--wp--preset--color--main)"
+				}
+			},
 			"h1": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--poppins)",
-          "fontWeight": "500",
-          "fontSize": "var(--wp--preset--font-size--xx-large)"
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontWeight": "600",
+					"fontSize": "var(--wp--preset--font-size--xx-large)"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--poppins)",
-          "fontWeight": "500",
-          "fontSize": "var(--wp--preset--font-size--x-large)"
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontWeight": "600",
+					"fontSize": "var(--wp--preset--font-size--x-large)"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--poppins)",
-          "fontWeight": "500",
-          "fontSize": "var(--wp--preset--font-size--large)"
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontWeight": "600",
+					"fontSize": "var(--wp--preset--font-size--large)"
 				}
 			},
 			"h4": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--poppins)",
-          "fontWeight": "500",
-          "fontSize": "var(--wp--preset--font-size--medium)"
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontWeight": "600",
+					"fontSize": "var(--wp--preset--font-size--medium)"
 				}
 			},
 			"h5": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--poppins)",
-          "fontWeight": "400",
-          "fontSize": "var(--wp--preset--font-size--base)"
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontWeight": "600",
+					"fontSize": "var(--wp--preset--font-size--base)"
 				}
 			},
 			"h6": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--poppins)",
-          "fontWeight": "400",
-          "fontSize": "var(--wp--preset--font-size--base)",
-          "textDecoration": "uppercase"
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontWeight": "600",
+					"fontSize": "var(--wp--preset--font-size--base)"
 				}
 			},
-      "link": {
-        "color": {
-          "text": "var:preset|color|primary"
-        },
-        "typography": {
-          "textDecoration": "none",
-          "fontWeight": "500"
-        },
-        ":hover": {
-          "color": {
-            "text": "var:preset|color|primary-alt"
-          },
-          "typography": {
-            "textDecoration": "none"
-          }
-        },
-        "css": "transition: color 200ms ease;"
-      }
+			"link": {
+				"color": {
+					"text": "var:preset|color|primary"
+				},
+				"typography": {
+					"textDecoration": "none",
+					"fontWeight": "500"
+				},
+				":hover": {
+					"color": {
+						"text": "var:preset|color|primary-accent"
+					},
+					"typography": {
+						"textDecoration": "none"
+					}
+				},
+				"css": "transition: color 200ms ease;"
+			}
 		},
-    "custom": {
-      "tour-operator": {
-        "meta-panel-gap": "0.5rem",
-        "meta-panel-padding-x": "0.75rem",
-        "meta-panel-padding-y": "0.5rem"
-      }
-    },
-    "blocks": {
-      "core/query-pagination": {
-        "spacing": {
-          "blockGap": "var(--wp--preset--spacing--medium)"
-        },
-        "elements": {
-          "link": {
-            "border": {
-              "color": "var:preset|color|primary",
-              "style": "solid",
-              "width": "2px",
-              "radius": "8px"
-            },
-            "color": {
-              "background": "var:preset|color|base",
-              "text": "var:preset|color|primary"
-            },
-            "typography": {
-              "textDecoration": "none"
-            },
-            ":hover": {
-              "color": {
-                "background": "var:preset|color|primary",
-                "text": "var:preset|color|base"
-              },
-              "typography": {
-                "textDecoration": "none"
-              }
-            },
-            "css": "&{transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;}"
-          }
-        }
-      },
-      "core/query-pagination-numbers": {
-        "spacing": {
-          "padding": {
-            "top": "8px",
-            "right": "10px",
-            "bottom": "8px",
-            "left": "10px"
-          }
-        },
-"css": "& .page-numbers.current { display: inline-flex; align-items: center; justify-content: center; padding-left: 16px !important; padding-right: 16px !important; padding-top: 8px !important; padding-bottom: 8px !important; line-height: 1.4; background-color: var(--wp--preset--color--primary); color: var(--wp--preset--color--base); border: 2px solid var(--wp--preset--color--primary); border-radius: 8px; box-shadow: none; }"
-
-      },
-      "core/query-pagination-previous": {
-        "spacing": {
-          "padding": {
-            "top": "8px",
-            "right": "24px",
-            "bottom": "8px",
-            "left": "24px"
-          }
-        },
-        "elements": {
-          "link": {
-
-            "color": {
-              "text": "var:preset|color|primary-alt"
-            }
-          }
-        }
-
-      },
-      "core/query-pagination-next": {
-        "spacing": {
-          "padding": {
-            "top": "8px",
-            "right": "24px",
-            "bottom": "8px",
-            "left": "24px"
-          }
-        }
-      },
-		  "lsx-tour-operator/additional-info": {
-        "border": {
-          "color": "var:preset|color|border-light",
-          "radius": "var:preset|border-radius|md",
-          "style": "solid",
-          "width": "var:custom|border|width|thin"
-        },
-        "color": {
-          "background": "var:preset|color|tertiary",
-          "text": "var:preset|color|main"
-        },
-        "spacing": {
-          "blockGap": "var:custom|tour-operator|meta-panel-gap",
-          "padding": {
-            "top": "var:custom|tour-operator|meta-panel-padding-y",
-            "bottom": "var:custom|tour-operator|meta-panel-padding-y",
-            "left": "var:custom|tour-operator|meta-panel-padding-x",
-            "right": "var:custom|tour-operator|meta-panel-padding-x"
-          }
-        },
-        "typography": {
-          "fontFamily": "var:preset|font-family|body",
-          "fontSize": "var:preset|font-size|small",
-          "lineHeight": "var:custom|typography|line-height|normal"
-        }
-      },
-      "lsx-tour-operator/booking-validity": {
-        "border": {
-          "color": "var:preset|color|border-light",
-          "radius": "var:preset|border-radius|md",
-          "style": "solid",
-          "width": "var:custom|border|width|thin"
-        },
-        "color": {
-          "background": "var:preset|color|tertiary",
-          "text": "var:preset|color|main"
-        },
-        "spacing": {
-          "blockGap": "var:custom|tour-operator|meta-panel-gap",
-          "padding": {
-            "top": "var:custom|tour-operator|meta-panel-padding-y",
-            "bottom": "var:custom|tour-operator|meta-panel-padding-y",
-            "left": "var:custom|tour-operator|meta-panel-padding-x",
-            "right": "var:custom|tour-operator|meta-panel-padding-x"
-          }
-        },
-        "typography": {
-          "fontFamily": "var:preset|font-family|body",
-          "fontSize": "var:preset|font-size|small",
-          "lineHeight": "var:custom|typography|line-height|normal"
-        }
-      },
-      "lsx-tour-operator/checkin-time": {
-        "border": {
-          "color": "var:preset|color|border-light",
-          "radius": "var:preset|border-radius|md",
-          "style": "solid",
-          "width": "var:custom|border|width|thin"
-        },
-        "color": {
-          "background": "var:preset|color|tertiary",
-          "text": "var:preset|color|main"
-        },
-        "spacing": {
-          "blockGap": "var:custom|tour-operator|meta-panel-gap",
-          "padding": {
-            "top": "var:custom|tour-operator|meta-panel-padding-y",
-            "bottom": "var:custom|tour-operator|meta-panel-padding-y",
-            "left": "var:custom|tour-operator|meta-panel-padding-x",
-            "right": "var:custom|tour-operator|meta-panel-padding-x"
-          }
-        },
-        "typography": {
-          "fontFamily": "var:preset|font-family|body",
-          "fontSize": "var:preset|font-size|small",
-          "lineHeight": "var:custom|typography|line-height|normal"
-        }
-      },
-      "lsx-tour-operator/checkout-time": {
-        "border": {
-          "color": "var:preset|color|border-light",
-          "radius": "var:preset|border-radius|md",
-          "style": "solid",
-          "width": "var:custom|border|width|thin"
-        },
-        "color": {
-          "background": "var:preset|color|tertiary",
-          "text": "var:preset|color|main"
-        },
-        "spacing": {
-          "blockGap": "var:custom|tour-operator|meta-panel-gap",
-          "padding": {
-            "top": "var:custom|tour-operator|meta-panel-padding-y",
-            "bottom": "var:custom|tour-operator|meta-panel-padding-y",
-            "left": "var:custom|tour-operator|meta-panel-padding-x",
-            "right": "var:custom|tour-operator|meta-panel-padding-x"
-          }
-        },
-        "typography": {
-          "fontFamily": "var:preset|font-family|body",
-          "fontSize": "var:preset|font-size|small",
-          "lineHeight": "var:custom|typography|line-height|normal"
-        }
-      },
-      "lsx-tour-operator/cuisine": {
-        "border": {
-          "color": "var:preset|color|border-light",
-          "radius": "var:preset|border-radius|md",
-          "style": "solid",
-          "width": "var:custom|border|width|thin"
-        },
-        "color": {
-          "background": "var:preset|color|tertiary",
-          "text": "var:preset|color|main"
-        },
-        "spacing": {
-          "blockGap": "var:custom|tour-operator|meta-panel-gap",
-          "padding": {
-            "top": "var:custom|tour-operator|meta-panel-padding-y",
-            "bottom": "var:custom|tour-operator|meta-panel-padding-y",
-            "left": "var:custom|tour-operator|meta-panel-padding-x",
-            "right": "var:custom|tour-operator|meta-panel-padding-x"
-          }
-        },
-        "typography": {
-          "fontFamily": "var:preset|font-family|body",
-          "fontSize": "var:preset|font-size|small",
-          "lineHeight": "var:custom|typography|line-height|normal"
-        }
-      },
-      "lsx-tour-operator/departs-from": {
-        "border": {
-          "color": "var:preset|color|border-light",
-          "radius": "var:preset|border-radius|md",
-          "style": "solid",
-          "width": "var:custom|border|width|thin"
-        },
-        "color": {
-          "background": "var:preset|color|tertiary",
-          "text": "var:preset|color|main"
-        },
-        "spacing": {
-          "blockGap": "var:custom|tour-operator|meta-panel-gap",
-          "padding": {
-            "top": "var:custom|tour-operator|meta-panel-padding-y",
-            "bottom": "var:custom|tour-operator|meta-panel-padding-y",
-            "left": "var:custom|tour-operator|meta-panel-padding-x",
-            "right": "var:custom|tour-operator|meta-panel-padding-x"
-          }
-        },
-        "typography": {
-          "fontFamily": "var:preset|font-family|body",
-          "fontSize": "var:preset|font-size|small",
-          "lineHeight": "var:custom|typography|line-height|normal"
-        }
-      },
-      "lsx-tour-operator/group-size": {
-        "border": {
-          "color": "var:preset|color|border-light",
-          "radius": "var:preset|border-radius|md",
-          "style": "solid",
-          "width": "var:custom|border|width|thin"
-        },
-        "color": {
-          "background": "var:preset|color|tertiary",
-          "text": "var:preset|color|main"
-        },
-        "spacing": {
-          "blockGap": "var:custom|tour-operator|meta-panel-gap",
-          "padding": {
-            "top": "var:custom|tour-operator|meta-panel-padding-y",
-            "bottom": "var:custom|tour-operator|meta-panel-padding-y",
-            "left": "var:custom|tour-operator|meta-panel-padding-x",
-            "right": "var:custom|tour-operator|meta-panel-padding-x"
-          }
-        },
-        "typography": {
-          "fontFamily": "var:preset|font-family|body",
-          "fontSize": "var:preset|font-size|small",
-          "lineHeight": "var:custom|typography|line-height|normal"
-        }
-      },
-      "lsx-tour-operator/minimum-child-age": {
-        "border": {
-          "color": "var:preset|color|border-light",
-          "radius": "var:preset|border-radius|md",
-          "style": "solid",
-          "width": "var:custom|border|width|thin"
-        },
-        "color": {
-          "background": "var:preset|color|tertiary",
-          "text": "var:preset|color|main"
-        },
-        "spacing": {
-          "blockGap": "var:custom|tour-operator|meta-panel-gap",
-          "padding": {
-            "top": "var:custom|tour-operator|meta-panel-padding-y",
-            "bottom": "var:custom|tour-operator|meta-panel-padding-y",
-            "left": "var:custom|tour-operator|meta-panel-padding-x",
-            "right": "var:custom|tour-operator|meta-panel-padding-x"
-          }
-        },
-        "typography": {
-          "fontFamily": "var:preset|font-family|body",
-          "fontSize": "var:preset|font-size|small",
-          "lineHeight": "var:custom|typography|line-height|normal"
-        }
-      },
-      "lsx-tour-operator/number-of-rooms": {
-        "border": {
-          "color": "var:preset|color|border-light",
-          "radius": "var:preset|border-radius|md",
-          "style": "solid",
-          "width": "var:custom|border|width|thin"
-        },
-        "color": {
-          "background": "var:preset|color|tertiary",
-          "text": "var:preset|color|main"
-        },
-        "spacing": {
-          "blockGap": "var:custom|tour-operator|meta-panel-gap",
-          "padding": {
-            "top": "var:custom|tour-operator|meta-panel-padding-y",
-            "bottom": "var:custom|tour-operator|meta-panel-padding-y",
-            "left": "var:custom|tour-operator|meta-panel-padding-x",
-            "right": "var:custom|tour-operator|meta-panel-padding-x"
-          }
-        },
-        "typography": {
-          "fontFamily": "var:preset|font-family|body",
-          "fontSize": "var:preset|font-size|small",
-          "lineHeight": "var:custom|typography|line-height|normal"
-        }
-      },
-      "lsx-tour-operator/special-interests": {
-        "border": {
-          "color": "var:preset|color|border-light",
-          "radius": "var:preset|border-radius|md",
-          "style": "solid",
-          "width": "var:custom|border|width|thin"
-        },
-        "color": {
-          "background": "var:preset|color|tertiary",
-          "text": "var:preset|color|main"
-        },
-        "spacing": {
-          "blockGap": "var:custom|tour-operator|meta-panel-gap",
-          "padding": {
-            "top": "var:custom|tour-operator|meta-panel-padding-y",
-            "bottom": "var:custom|tour-operator|meta-panel-padding-y",
-            "left": "var:custom|tour-operator|meta-panel-padding-x",
-            "right": "var:custom|tour-operator|meta-panel-padding-x"
-          }
-        },
-        "typography": {
-          "fontFamily": "var:preset|font-family|body",
-          "fontSize": "var:preset|font-size|small",
-          "lineHeight": "var:custom|typography|line-height|normal"
-        }
-      },
-      "lsx-tour-operator/spoken-languages": {
-        "border": {
-          "color": "var:preset|color|border-light",
-          "radius": "var:preset|border-radius|md",
-          "style": "solid",
-          "width": "var:custom|border|width|thin"
-        },
-        "color": {
-          "background": "var:preset|color|tertiary",
-          "text": "var:preset|color|main"
-        },
-        "spacing": {
-          "blockGap": "var:custom|tour-operator|meta-panel-gap",
-          "padding": {
-            "top": "var:custom|tour-operator|meta-panel-padding-y",
-            "bottom": "var:custom|tour-operator|meta-panel-padding-y",
-            "left": "var:custom|tour-operator|meta-panel-padding-x",
-            "right": "var:custom|tour-operator|meta-panel-padding-x"
-          }
-        },
-        "typography": {
-          "fontFamily": "var:preset|font-family|body",
-          "fontSize": "var:preset|font-size|small",
-          "lineHeight": "var:custom|typography|line-height|normal"
-        }
-      },
-      "lsx-tour-operator/travel-styles": {
-        "color": {
-          "text": "var:preset|color|main"
-        },
-        "spacing": {
-          "blockGap": "0.5rem"
-        },
-        "typography": {
-          "fontFamily": "var:preset|font-family|body",
-          "fontSize": "var:preset|font-size|small",
-          "lineHeight": "var:custom|typography|line-height|normal"
-        },
-        "elements": {
-          "link": {
-            "color": {
-              "text": "var:preset|color|primary"
-            },
-            ":hover": {
-              "color": {
-                "text": "var:preset|color|support-red"
-              }
-            }
-          }
-        }
-      },
-      "lsx-tour-operator/related-regions": {
-        "color": {
-          "text": "var:preset|color|main"
-        },
-        "spacing": {
-          "blockGap": "0.75rem"
-        },
-        "typography": {
-          "fontFamily": "var:preset|font-family|body",
-          "fontSize": "var:preset|font-size|small",
-          "lineHeight": "var:custom|typography|line-height|normal"
-        }
-      },
-      "lsx-tour-operator/google-map": {
-        "border": {
-          "color": "var:preset|color|border-light",
-          "radius": "var:preset|border-radius|lg",
-          "style": "solid",
-          "width": "var:custom|border|width|thin"
-        },
-        "color": {
-          "background": "var:preset|color|base",
-          "text": "var:preset|color|main"
-        },
-        "shadow": "var:preset|shadow|small-light",
-        "spacing": {
-          "margin": {
-            "top": "var:preset|spacing|small",
-            "bottom": "var:preset|spacing|small"
-          },
-          "padding": {
-            "top": "0.5rem",
-            "bottom": "0.5rem",
-            "left": "0.5rem",
-            "right": "0.5rem"
-          }
-        }
-      },
-      "lsx-tour-operator/banner-cover": {
-        "border": {
-          "radius": "var:preset|border-radius|md"
-        },
-        "spacing": {
-          "padding": {
-            "top": "var:preset|spacing|x-large",
-            "bottom": "var:preset|spacing|x-large",
-            "left": "var:preset|spacing|medium",
-            "right": "var:preset|spacing|medium"
-          }
-        },
-        "elements": {
-          "heading": {
-            "color": {
-              "text": "var:preset|color|base"
-            },
-            "typography": {
-              "fontFamily": "var:preset|font-family|heading",
-              "fontWeight": "600"
-            }
-          }
-        }
-      },
-      "lsx-tour-operator/modal-button": {
-        "border": {
-          "radius": "var:preset|border-radius|sm"
-        },
-        "typography": {
-          "fontFamily": "var:preset|font-family|body",
-          "fontSize": "var:preset|font-size|small",
-          "fontWeight": "600",
-          "letterSpacing": "var:custom|typography|letter-spacing|wide"
-        }
-      },
-      "lsx-tour-operator/permalink-button": {
-        "border": {
-          "radius": "var:preset|border-radius|sm"
-        },
-        "typography": {
-          "fontFamily": "var:preset|font-family|body",
-          "fontSize": "var:preset|font-size|small",
-          "fontWeight": "600",
-          "letterSpacing": "var:custom|typography|letter-spacing|wide"
-        }
-      },
-      "lsx-tour-operator/not-included": {
-        "border": {
-          "color": "var:preset|color|border-light",
-          "radius": "var:preset|border-radius|sm",
-          "style": "solid",
-          "width": "var:custom|border|width|thin"
-        },
-        "color": {
-          "background": "var:preset|color|tertiary",
-          "text": "var:preset|color|main"
-        },
-        "spacing": {
-          "padding": {
-            "top": "var:custom|tour-operator|meta-panel-padding-y",
-            "bottom": "var:custom|tour-operator|meta-panel-padding-y",
-            "left": "var:custom|tour-operator|meta-panel-padding-x",
-            "right": "var:custom|tour-operator|meta-panel-padding-x"
-          }
-        },
-        "typography": {
-          "fontSize": "var:preset|font-size|small",
-          "lineHeight": "var:custom|typography|line-height|normal"
-        }
-      },
-      "lsx-tour-operator/icons": {
-        "color": {
-          "text": "var:preset|color|primary"
-        },
-        "spacing": {
-          "blockGap": "0.4rem"
-        }
-      }
-    }
+		"custom": {
+			"tour-operator": {
+				"meta-panel-gap": "0.5rem",
+				"meta-panel-padding-x": "0.75rem",
+				"meta-panel-padding-y": "0.5rem"
+			},
+			"typography": {
+				"line-height": {
+					"normal": "1.5",
+					"tight": "1.25"
+				},
+				"letter-spacing": {
+					"wide": "0.06em",
+					"widest": "0.12em"
+				}
+			},
+			"border": {
+				"width": {
+					"thin": "1px"
+				}
+			}
+		},
+		"blocks": {
+			"core/query-pagination": {
+				"spacing": {
+					"blockGap": "var(--wp--preset--spacing--medium)"
+				},
+				"elements": {
+					"link": {
+						"border": {
+							"color": "var:preset|color|primary",
+							"style": "solid",
+							"width": "2px",
+							"radius": "8px"
+						},
+						"color": {
+							"background": "var:preset|color|base",
+							"text": "var:preset|color|primary"
+						},
+						"typography": {
+							"textDecoration": "none"
+						},
+						":hover": {
+							"color": {
+								"background": "var:preset|color|primary",
+								"text": "var:preset|color|base"
+							},
+							"typography": {
+								"textDecoration": "none"
+							}
+						},
+						"css": "&{transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;}"
+					}
+				}
+			},
+			"core/query-pagination-numbers": {
+				"spacing": {
+					"padding": {
+						"top": "8px",
+						"right": "10px",
+						"bottom": "8px",
+						"left": "10px"
+					}
+				},
+				"css": "& .page-numbers.current { display: inline-flex; align-items: center; justify-content: center; padding-left: 16px !important; padding-right: 16px !important; padding-top: 8px !important; padding-bottom: 8px !important; line-height: 1.4; background-color: var(--wp--preset--color--primary); color: var(--wp--preset--color--base); border: 2px solid var(--wp--preset--color--primary); border-radius: 8px; box-shadow: none; }"
+			},
+			"core/query-pagination-previous": {
+				"spacing": {
+					"padding": {
+						"top": "8px",
+						"right": "24px",
+						"bottom": "8px",
+						"left": "24px"
+					}
+				},
+				"elements": {
+					"link": {
+						"color": {
+							"text": "var:preset|color|primary-accent"
+						}
+					}
+				}
+			},
+			"core/query-pagination-next": {
+				"spacing": {
+					"padding": {
+						"top": "8px",
+						"right": "24px",
+						"bottom": "8px",
+						"left": "24px"
+					}
+				}
+			},
+			"lsx-tour-operator/additional-info": {
+				"border": {
+					"color": "var:preset|color|border-light",
+					"radius": "var:preset|border-radius|md",
+					"style": "solid",
+					"width": "var:custom|border|width|thin"
+				},
+				"color": {
+					"background": "var:preset|color|tertiary",
+					"text": "var:preset|color|main"
+				},
+				"spacing": {
+					"blockGap": "var:custom|tour-operator|meta-panel-gap",
+					"padding": {
+						"top": "var:custom|tour-operator|meta-panel-padding-y",
+						"bottom": "var:custom|tour-operator|meta-panel-padding-y",
+						"left": "var:custom|tour-operator|meta-panel-padding-x",
+						"right": "var:custom|tour-operator|meta-panel-padding-x"
+					}
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontSize": "var:preset|font-size|small",
+					"lineHeight": "var:custom|typography|line-height|normal"
+				}
+			},
+			"lsx-tour-operator/booking-validity": {
+				"border": {
+					"color": "var:preset|color|border-light",
+					"radius": "var:preset|border-radius|md",
+					"style": "solid",
+					"width": "var:custom|border|width|thin"
+				},
+				"color": {
+					"background": "var:preset|color|tertiary",
+					"text": "var:preset|color|main"
+				},
+				"spacing": {
+					"blockGap": "var:custom|tour-operator|meta-panel-gap",
+					"padding": {
+						"top": "var:custom|tour-operator|meta-panel-padding-y",
+						"bottom": "var:custom|tour-operator|meta-panel-padding-y",
+						"left": "var:custom|tour-operator|meta-panel-padding-x",
+						"right": "var:custom|tour-operator|meta-panel-padding-x"
+					}
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontSize": "var:preset|font-size|small",
+					"lineHeight": "var:custom|typography|line-height|normal"
+				}
+			},
+			"lsx-tour-operator/checkin-time": {
+				"border": {
+					"color": "var:preset|color|border-light",
+					"radius": "var:preset|border-radius|md",
+					"style": "solid",
+					"width": "var:custom|border|width|thin"
+				},
+				"color": {
+					"background": "var:preset|color|tertiary",
+					"text": "var:preset|color|main"
+				},
+				"spacing": {
+					"blockGap": "var:custom|tour-operator|meta-panel-gap",
+					"padding": {
+						"top": "var:custom|tour-operator|meta-panel-padding-y",
+						"bottom": "var:custom|tour-operator|meta-panel-padding-y",
+						"left": "var:custom|tour-operator|meta-panel-padding-x",
+						"right": "var:custom|tour-operator|meta-panel-padding-x"
+					}
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontSize": "var:preset|font-size|small",
+					"lineHeight": "var:custom|typography|line-height|normal"
+				}
+			},
+			"lsx-tour-operator/checkout-time": {
+				"border": {
+					"color": "var:preset|color|border-light",
+					"radius": "var:preset|border-radius|md",
+					"style": "solid",
+					"width": "var:custom|border|width|thin"
+				},
+				"color": {
+					"background": "var:preset|color|tertiary",
+					"text": "var:preset|color|main"
+				},
+				"spacing": {
+					"blockGap": "var:custom|tour-operator|meta-panel-gap",
+					"padding": {
+						"top": "var:custom|tour-operator|meta-panel-padding-y",
+						"bottom": "var:custom|tour-operator|meta-panel-padding-y",
+						"left": "var:custom|tour-operator|meta-panel-padding-x",
+						"right": "var:custom|tour-operator|meta-panel-padding-x"
+					}
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontSize": "var:preset|font-size|small",
+					"lineHeight": "var:custom|typography|line-height|normal"
+				}
+			},
+			"lsx-tour-operator/cuisine": {
+				"border": {
+					"color": "var:preset|color|border-light",
+					"radius": "var:preset|border-radius|md",
+					"style": "solid",
+					"width": "var:custom|border|width|thin"
+				},
+				"color": {
+					"background": "var:preset|color|tertiary",
+					"text": "var:preset|color|main"
+				},
+				"spacing": {
+					"blockGap": "var:custom|tour-operator|meta-panel-gap",
+					"padding": {
+						"top": "var:custom|tour-operator|meta-panel-padding-y",
+						"bottom": "var:custom|tour-operator|meta-panel-padding-y",
+						"left": "var:custom|tour-operator|meta-panel-padding-x",
+						"right": "var:custom|tour-operator|meta-panel-padding-x"
+					}
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontSize": "var:preset|font-size|small",
+					"lineHeight": "var:custom|typography|line-height|normal"
+				}
+			},
+			"lsx-tour-operator/departs-from": {
+				"border": {
+					"color": "var:preset|color|border-light",
+					"radius": "var:preset|border-radius|md",
+					"style": "solid",
+					"width": "var:custom|border|width|thin"
+				},
+				"color": {
+					"background": "var:preset|color|tertiary",
+					"text": "var:preset|color|main"
+				},
+				"spacing": {
+					"blockGap": "var:custom|tour-operator|meta-panel-gap",
+					"padding": {
+						"top": "var:custom|tour-operator|meta-panel-padding-y",
+						"bottom": "var:custom|tour-operator|meta-panel-padding-y",
+						"left": "var:custom|tour-operator|meta-panel-padding-x",
+						"right": "var:custom|tour-operator|meta-panel-padding-x"
+					}
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontSize": "var:preset|font-size|small",
+					"lineHeight": "var:custom|typography|line-height|normal"
+				}
+			},
+			"lsx-tour-operator/group-size": {
+				"border": {
+					"color": "var:preset|color|border-light",
+					"radius": "var:preset|border-radius|md",
+					"style": "solid",
+					"width": "var:custom|border|width|thin"
+				},
+				"color": {
+					"background": "var:preset|color|tertiary",
+					"text": "var:preset|color|main"
+				},
+				"spacing": {
+					"blockGap": "var:custom|tour-operator|meta-panel-gap",
+					"padding": {
+						"top": "var:custom|tour-operator|meta-panel-padding-y",
+						"bottom": "var:custom|tour-operator|meta-panel-padding-y",
+						"left": "var:custom|tour-operator|meta-panel-padding-x",
+						"right": "var:custom|tour-operator|meta-panel-padding-x"
+					}
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontSize": "var:preset|font-size|small",
+					"lineHeight": "var:custom|typography|line-height|normal"
+				}
+			},
+			"lsx-tour-operator/minimum-child-age": {
+				"border": {
+					"color": "var:preset|color|border-light",
+					"radius": "var:preset|border-radius|md",
+					"style": "solid",
+					"width": "var:custom|border|width|thin"
+				},
+				"color": {
+					"background": "var:preset|color|tertiary",
+					"text": "var:preset|color|main"
+				},
+				"spacing": {
+					"blockGap": "var:custom|tour-operator|meta-panel-gap",
+					"padding": {
+						"top": "var:custom|tour-operator|meta-panel-padding-y",
+						"bottom": "var:custom|tour-operator|meta-panel-padding-y",
+						"left": "var:custom|tour-operator|meta-panel-padding-x",
+						"right": "var:custom|tour-operator|meta-panel-padding-x"
+					}
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontSize": "var:preset|font-size|small",
+					"lineHeight": "var:custom|typography|line-height|normal"
+				}
+			},
+			"lsx-tour-operator/number-of-rooms": {
+				"border": {
+					"color": "var:preset|color|border-light",
+					"radius": "var:preset|border-radius|md",
+					"style": "solid",
+					"width": "var:custom|border|width|thin"
+				},
+				"color": {
+					"background": "var:preset|color|tertiary",
+					"text": "var:preset|color|main"
+				},
+				"spacing": {
+					"blockGap": "var:custom|tour-operator|meta-panel-gap",
+					"padding": {
+						"top": "var:custom|tour-operator|meta-panel-padding-y",
+						"bottom": "var:custom|tour-operator|meta-panel-padding-y",
+						"left": "var:custom|tour-operator|meta-panel-padding-x",
+						"right": "var:custom|tour-operator|meta-panel-padding-x"
+					}
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontSize": "var:preset|font-size|small",
+					"lineHeight": "var:custom|typography|line-height|normal"
+				}
+			},
+			"lsx-tour-operator/special-interests": {
+				"border": {
+					"color": "var:preset|color|border-light",
+					"radius": "var:preset|border-radius|md",
+					"style": "solid",
+					"width": "var:custom|border|width|thin"
+				},
+				"color": {
+					"background": "var:preset|color|tertiary",
+					"text": "var:preset|color|main"
+				},
+				"spacing": {
+					"blockGap": "var:custom|tour-operator|meta-panel-gap",
+					"padding": {
+						"top": "var:custom|tour-operator|meta-panel-padding-y",
+						"bottom": "var:custom|tour-operator|meta-panel-padding-y",
+						"left": "var:custom|tour-operator|meta-panel-padding-x",
+						"right": "var:custom|tour-operator|meta-panel-padding-x"
+					}
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontSize": "var:preset|font-size|small",
+					"lineHeight": "var:custom|typography|line-height|normal"
+				}
+			},
+			"lsx-tour-operator/spoken-languages": {
+				"border": {
+					"color": "var:preset|color|border-light",
+					"radius": "var:preset|border-radius|md",
+					"style": "solid",
+					"width": "var:custom|border|width|thin"
+				},
+				"color": {
+					"background": "var:preset|color|tertiary",
+					"text": "var:preset|color|main"
+				},
+				"spacing": {
+					"blockGap": "var:custom|tour-operator|meta-panel-gap",
+					"padding": {
+						"top": "var:custom|tour-operator|meta-panel-padding-y",
+						"bottom": "var:custom|tour-operator|meta-panel-padding-y",
+						"left": "var:custom|tour-operator|meta-panel-padding-x",
+						"right": "var:custom|tour-operator|meta-panel-padding-x"
+					}
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontSize": "var:preset|font-size|small",
+					"lineHeight": "var:custom|typography|line-height|normal"
+				}
+			},
+			"lsx-tour-operator/travel-styles": {
+				"color": {
+					"text": "var:preset|color|main"
+				},
+				"spacing": {
+					"blockGap": "0.5rem"
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontSize": "var:preset|font-size|small",
+					"lineHeight": "var:custom|typography|line-height|normal"
+				},
+				"elements": {
+					"link": {
+						"color": {
+							"text": "var:preset|color|primary"
+						},
+						":hover": {
+							"color": {
+								"text": "var:preset|color|primary-accent"
+							}
+						}
+					}
+				}
+			},
+			"lsx-tour-operator/related-regions": {
+				"color": {
+					"text": "var:preset|color|main"
+				},
+				"spacing": {
+					"blockGap": "0.75rem"
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontSize": "var:preset|font-size|small",
+					"lineHeight": "var:custom|typography|line-height|normal"
+				}
+			},
+			"lsx-tour-operator/google-map": {
+				"border": {
+					"color": "var:preset|color|border-light",
+					"radius": "var:preset|border-radius|lg",
+					"style": "solid",
+					"width": "var:custom|border|width|thin"
+				},
+				"color": {
+					"background": "var:preset|color|base",
+					"text": "var:preset|color|main"
+				},
+				"shadow": "var:preset|shadow|small-light",
+				"spacing": {
+					"margin": {
+						"top": "var:preset|spacing|small",
+						"bottom": "var:preset|spacing|small"
+					},
+					"padding": {
+						"top": "0.5rem",
+						"bottom": "0.5rem",
+						"left": "0.5rem",
+						"right": "0.5rem"
+					}
+				}
+			},
+			"lsx-tour-operator/banner-cover": {
+				"border": {
+					"radius": "var:preset|border-radius|md"
+				},
+				"spacing": {
+					"padding": {
+						"top": "var:preset|spacing|x-large",
+						"bottom": "var:preset|spacing|x-large",
+						"left": "var:preset|spacing|medium",
+						"right": "var:preset|spacing|medium"
+					}
+				},
+				"elements": {
+					"heading": {
+						"color": {
+							"text": "var:preset|color|base"
+						},
+						"typography": {
+							"fontFamily": "var:preset|font-family|heading",
+							"fontWeight": "600"
+						}
+					}
+				}
+			},
+			"lsx-tour-operator/modal-button": {
+				"border": {
+					"radius": "var:preset|border-radius|sm"
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontSize": "var:preset|font-size|small",
+					"fontWeight": "600",
+					"letterSpacing": "var:custom|typography|letter-spacing|wide"
+				}
+			},
+			"lsx-tour-operator/permalink-button": {
+				"border": {
+					"radius": "var:preset|border-radius|sm"
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|body",
+					"fontSize": "var:preset|font-size|small",
+					"fontWeight": "600",
+					"letterSpacing": "var:custom|typography|letter-spacing|wide"
+				}
+			},
+			"lsx-tour-operator/not-included": {
+				"border": {
+					"color": "var:preset|color|border-light",
+					"radius": "var:preset|border-radius|sm",
+					"style": "solid",
+					"width": "var:custom|border|width|thin"
+				},
+				"color": {
+					"background": "var:preset|color|tertiary",
+					"text": "var:preset|color|main"
+				},
+				"spacing": {
+					"padding": {
+						"top": "var:custom|tour-operator|meta-panel-padding-y",
+						"bottom": "var:custom|tour-operator|meta-panel-padding-y",
+						"left": "var:custom|tour-operator|meta-panel-padding-x",
+						"right": "var:custom|tour-operator|meta-panel-padding-x"
+					}
+				},
+				"typography": {
+					"fontSize": "var:preset|font-size|small",
+					"lineHeight": "var:custom|typography|line-height|normal"
+				}
+			},
+			"lsx-tour-operator/icons": {
+				"color": {
+					"text": "var:preset|color|primary"
+				},
+				"spacing": {
+					"blockGap": "0.4rem"
+				}
+			}
+		}
 	}
 }

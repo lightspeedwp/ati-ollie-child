@@ -2,11 +2,11 @@
 	"$schema": "https://schemas.wp.org/wp/trunk/theme.json",
 	"version": 3,
 	"title": "Page Section Default",
-	"slug": "ga-page-section-default",
+	"slug": "ati-page-section-default",
 	"blockTypes": [
 		"core/group"
 	],
-	"description": "Default styling for page sections",
+	"description": "Default styling for ATI page sections",
 	"styles": {
 		"color": {
 			"background": "var:preset|color|base",

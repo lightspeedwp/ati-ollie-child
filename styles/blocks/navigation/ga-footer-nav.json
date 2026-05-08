@@ -22,6 +22,6 @@
 				}
 			}
 		},
-		"css": "& a{transition: color 200ms ease;} & a:hover{color: var(--wp--preset--color--primary-alt); text-decoration: none;} & a:active{color: var(--wp--preset--color--primary-alt); text-decoration: none;} & a:focus-visible{color: var(--wp--preset--color--primary-alt); outline: 2px solid var(--wp--preset--color--primary-alt); outline-offset: 2px;}"
+		"css": "& a{transition: color 200ms ease;} & a:hover{color: var(--wp--preset--color--primary-accent); text-decoration: none;} & a:active{color: var(--wp--preset--color--primary-accent); text-decoration: none;} & a:focus-visible{color: var(--wp--preset--color--primary-accent); outline: 2px solid var(--wp--preset--color--primary-accent); outline-offset: 2px;}"
 	}
 }

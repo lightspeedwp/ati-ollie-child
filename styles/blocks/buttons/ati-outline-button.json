@@ -1,12 +1,12 @@
 {
 	"$schema": "https://schemas.wp.org/wp/6.9/theme.json",
 	"version": 3,
-	"title": "GA Outline",
-	"slug": "ga-outline-button",
+	"title": "ATI Outline",
+	"slug": "ati-outline-button",
 	"blockTypes": [
 		"core/button"
 	],
-	"description": "GoAfrica outline button",
+	"description": "ATI outline button",
 	"styles": {
 		"border": {
 			"radius": "var:preset|border-radius|sm",
