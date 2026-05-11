@@ -8,7 +8,7 @@ Follow the user's request and this file's guidance when working in this reposito
 - Verified repo state: the default branch is `develop`.
 - Verified implementation direction: this is an Ollie child theme (`Template: ollie`) being rebuilt as a block theme for ATI Holidays.
 - Verified design source in-repo: `DESIGN.md` defines ATI tokens, typography, component intent, and Tour Operator compatibility rules.
-- Verified current migration state: the repo still contains copied GoAfrica identifiers and content in active theme files, while an open PR (`#1`, “Convert GoAfrica Ollie child theme to ATI Holidays Ollie child theme”) is already addressing part of that retheme.
+- Verified current migration state: the repo still contains copied legacy identifiers and content in active theme files, while an open PR (`#1`) is already addressing part of that retheme.
 - Inferred product context from supplied sources: the original ATI site predates this rebuild, the redesign was completed in 2022, and the current dev site is the block-theme rebuild target while the live site remains the production content reference.
 
 ## Repository Structure
@@ -21,7 +21,7 @@ Follow the user's request and this file's guidance when working in this reposito
 - `patterns/*.php`: reusable block patterns, including header/footer and ATI/Tour Operator-oriented card patterns.
 - `functions.php`: front-end enqueue logic and render filters that rewrite paragraph output for button-link pills and rating stars.
 - `style.css`: theme header metadata plus custom CSS for sliders, header search, and navigation behaviors.
-- `readme.txt`: theme readme metadata; currently still carries GoAfrica naming.
+- `readme.txt`: theme readme metadata; currently still carries legacy source-project naming.
 - `.github/copilot-instructions.md` and `.github/instructions/*.instructions.md`: repo-specific guidance that reinforces the ATI retheme and token policy.
 
 ## Dev Environment Tips
@@ -48,7 +48,7 @@ Follow the user's request and this file's guidance when working in this reposito
 - Use `patterns/*.php` for reusable ATI card layouts, destination/tour sections, and shared header/footer block markup.
 - Keep block markup editor-compatible. Do not replace block markup with ad hoc PHP or raw HTML unless the file already requires that pattern.
 - Preserve the `render_block` filters in `functions.php` unless you are deliberately changing the GA-style paragraph button/rating behavior and have checked the affected paragraph style names.
-- Current repo reality: several files still use `ga-*` classnames and `go-africa-ollie-child` theme references. Treat those as migration drift, not as stable ATI conventions.
+- Current repo reality: several files still use legacy short-prefix classnames and legacy child-theme references. Treat those as migration drift, not as stable ATI conventions.
 
 ## Styling and Token Sources
 
@@ -100,13 +100,13 @@ Follow the user's request and this file's guidance when working in this reposito
 
 ## Safety and Boundaries
 
-- The current `develop` branch is still in migration. Do not treat copied GoAfrica content as ATI truth.
+- The current `develop` branch is still in migration. Do not treat copied legacy source-project content as ATI truth.
 - Known verified drift still present in inspected files:
-  - `style.css` still declares `Go Africa Ollie Child` metadata and `go-africa-ollie-child` text domain
-  - `functions.php` still uses `goafrica_*` function names and asset handles
-  - `readme.txt` still uses the GoAfrica slug and description
-  - `parts/header.html` and `parts/footer.html` still reference `theme":"go-africa-ollie-child`
-  - `patterns/header.php`, `patterns/footer.php`, and `templates/front-page.html` still contain copied GoAfrica content, URLs, classes, or text
+  - `style.css` still declares legacy theme metadata and legacy text domain values
+  - `functions.php` still uses legacy function names and asset handles
+  - `readme.txt` still uses the legacy slug and description
+  - `parts/header.html` and `parts/footer.html` still reference legacy `theme` values
+  - `patterns/header.php`, `patterns/footer.php`, and `templates/front-page.html` still contain copied legacy content, URLs, classes, or text
 - Do not hard-code raw colors when an existing ATI preset slug is the correct source.
 - Do not remove compatibility tokens just because they look duplicated; `DESIGN.md` explicitly keeps some ATI and compatibility layers side by side.
 - Do not flatten modular `styles/**/*.json` structures into `style.css` unless there is no block-theme-native place for the rule.

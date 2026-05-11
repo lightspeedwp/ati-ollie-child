@@ -19,7 +19,7 @@ Required behavior:
 - inspect existing file ownership before proposing edits
 - prefer `theme.json` and related JSON files for design-token ownership
 - preserve ATI dark-card styling for `lightspeedwp/tour-operator` blocks
-- replace inherited GoAfrica names, tokens, and typography
+- replace inherited legacy source-project names, tokens, and typography
 - keep changes small and additive
 - treat spacing, widths, and shadows as provisional when `DESIGN.md` says they are provisional
 

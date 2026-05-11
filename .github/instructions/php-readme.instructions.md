@@ -8,14 +8,14 @@ These files currently contain copied-project drift and should be treated as earl
 
 For `functions.php`:
 
-- replace `goafrica_*` function names with ATI-specific names
-- replace GoAfrica asset handles such as `goafrica-ollie-child` and `goafrica-faq-accordion`
-- update package docblocks so they describe ATI, not GoAfrica
+- replace legacy function-name prefixes with ATI-specific names
+- replace legacy asset handles with ATI-specific handles
+- update package docblocks so they describe ATI, not the source project
 - preserve behavior for Tour Operator block rendering while renaming identifiers safely
 
 For `readme.txt`:
 
-- replace the `go-africa-ollie-child` slug and description with ATI-specific values
+- replace legacy slug values and descriptions with ATI-specific values
 - align the description with the ATI Holidays block-theme retheme
 - keep WordPress readme structure valid
 
