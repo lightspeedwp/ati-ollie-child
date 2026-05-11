@@ -1,167 +1,224 @@
-# Agent Instructions
+---
+version: alpha
+name: ATI Holidays Block Theme
+description: ATI Holidays design contract for the Ollie-based block theme and Tour Operator integration, using ATI-approved brand colors, Forum typography, and plugin-safe compatibility tokens.
+colors:
+  primary: "#DBBD8D"
+  primary-accent: "#AA653C"
+  primary-alt: "#AA653C"
+  primary-alt-accent: "#7C2D12"
+  primary-200: "#F8F7F3"
+  primary-700: "#262423"
+  main: "#231F20"
+  contrast: "#231F20"
+  base: "#FFFFFF"
+  ink: "#262423"
+  secondary: "#5C5652"
+  tertiary: "#F8F7F3"
+  border-light: "#E8E1D8"
+  border-dark: "#8E8479"
+  support-gold: "#BAAC2F"
+  support-red: "#B92A02"
+  support-sky: "#BEDCF8"
+  error-text: "#A94442"
+  error-background: "#F2DEDE"
+  error-border: "#EBCCD1"
+typography:
+  body-md:
+    fontFamily: Forum
+    fontSize: 16px
+    fontWeight: 400
+    lineHeight: 24px
+  nav-md:
+    fontFamily: Forum
+    fontSize: 17px
+    fontWeight: 600
+    lineHeight: 24px
+  button-md:
+    fontFamily: Forum
+    fontSize: 18px
+    fontWeight: 400
+    lineHeight: 24px
+    letterSpacing: 0.6px
+  heading-xl:
+    fontFamily: Forum
+    fontSize: 54px
+    fontWeight: 600
+    lineHeight: 66px
+  heading-lg:
+    fontFamily: Forum
+    fontSize: 36px
+    fontWeight: 600
+    lineHeight: 44px
+  heading-md:
+    fontFamily: Forum
+    fontSize: 24px
+    fontWeight: 600
+    lineHeight: 34px
+rounded:
+  xs: 4px
+  sm: 8px
+  md: 15px
+  lg: 24px
+spacing:
+  10: 10px
+  20: 20px
+  30: 30px
+  40: 40px
+  50: 50px
+  60: 60px
+  70: 70px
+  80: 80px
+  md: 15px
+  lg: 24px
+components:
+  button-primary:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.main}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.md}"
+    padding: "{spacing.20}"
+  button-primary-hover:
+    backgroundColor: "{colors.primary-accent}"
+    textColor: "{colors.base}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.md}"
+    padding: "{spacing.20}"
+  breadcrumb-bar:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.base}"
+    typography: "{typography.nav-md}"
+    padding: "{spacing.20}"
+  sticky-menu:
+    backgroundColor: "{colors.contrast}"
+    textColor: "{colors.base}"
+    typography: "{typography.nav-md}"
+    padding: "{spacing.20}"
+  review-section:
+    backgroundColor: "{colors.primary-200}"
+    textColor: "{colors.main}"
+    typography: "{typography.body-md}"
+    padding: "{spacing.50}"
+  card-dark:
+    backgroundColor: "{colors.main}"
+    textColor: "{colors.base}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.md}"
+    padding: "{spacing.30}"
+  input-default:
+    backgroundColor: "{colors.base}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.md}"
+    padding: "{spacing.20}"
+---
+# ATI Holidays Design Contract
 
-Follow the user's request and this file's guidance when working in this repository.
+## Overview
+- Primary mode: `update-existing`
+- This package is the ATI Holidays source-of-truth design brief for the Ollie-based block theme rebuild and Tour Operator integration.
+- The design system must preserve ATI’s established brand language instead of inheriting copied GoAfrica or upstream Ollie defaults.
+- Highest-confidence ATI evidence comes from the ATI block-theme project document, ATI Figma design system, and legacy ATI LSX child implementation.
+- Use `/workspace/output/ati-holidays-theme.json` as the exact implementation companion for this document.
 
-## Repository Mission
+## Colors
+- Verified ATI brand colors:
+  `primary` = `#DBBD8D`
+  `primary-accent` = `#AA653C`
+  `main` and `contrast` = `#231F20`
+  `primary-700` and `ink` = `#262423`
+  `base` = `#FFFFFF`
+- Verified supporting system colors:
+  `primary-200` and `tertiary` = `#F8F7F3`
+  `border-light` = `#E8E1D8`
+  `border-dark` = `#8E8479`
+- Compatibility note:
+  Tour Operator templates require `primary`, `contrast`, `base`, `primary-700`, and `primary-200` to exist as resolvable palette slugs.
+- Usage intent:
+  use sand for default calls to action, utility accents, and borders
+  use rust for hover and stronger action emphasis
+  use charcoal for dark surfaces and primary contrast roles
+  use `#262423` for deeper text emphasis, breadcrumb hover text, and dark-on-light compatibility cases
 
-This repository is an ATI Holidays WordPress block theme retheme based on a duplicated child theme that still contains inherited GoAfrica values.
+## Typography
+- ATI uses `Forum` across headings, body copy, navigation, and buttons.
+- Verified desktop typography:
+  `heading-xl` = `54/66`
+  `heading-lg` = `36/44`
+  `heading-md` = `24/34`
+  `body-md` = `16/24`
+  `nav-md` = `17/24`
+  `button-md` = `18/24`, uppercase, `0.6px` letter spacing
+- Migration requirement:
+  remove inherited `Mona Sans` and `Poppins` usage from ATI-facing theme output.
 
-The main job is to replace copied project identity with ATI-specific design, content structure, metadata, and block styling without breaking WordPress block-theme behavior or Tour Operator compatibility.
+## Layout & Spacing
+- Current child-theme layout baseline:
+  `contentSize: 800px`
+  `wideSize: 1320px`
+- Tour Operator compatibility spacing ladder:
+  `10` = `10px`
+  `20` = `20px`
+  `30` = `30px`
+  `40` = `40px`
+  `50` = `50px`
+  `60` = `60px`
+  `70` = `70px`
+  `80` = `80px`
+- ATI rhythm note:
+  `15px` remains the core ATI control spacing and radius cue, but it does not replace the numeric Tour Operator preset ladder.
+- Implementation rule:
+  keep the numeric preset slugs in `theme.json` even if named spacing tokens such as `small` and `medium` are also present.
 
-## Primary Sources
+## Elevation
+- No ATI-specific shadow system is verified strongly enough to treat as brand-defining.
+- Prefer borders, surface contrast, and spacing over decorative shadow use.
+- Any retained inherited shadow preset should be treated as secondary implementation support rather than ATI visual identity.
 
-Use sources in this order when they conflict:
+## Shapes
+- ATI’s primary control radius is `15px`.
+- Use `15px` for branded buttons, form controls, and modal actions.
+- Tour Operator patterns also use smaller inherited radii such as `4px`, `8px`, and `0.5rem`.
+- Normalize where practical, but do not break block or plugin layouts to force a single radius everywhere.
 
-1. direct user instructions
-2. `DESIGN.md`
-3. root `AGENTS.md`
-4. `.github/copilot-instructions.md`
-5. `.github/instructions/*.instructions.md`
-6. current repository files
-7. linked issues and pull requests
-8. upstream Ollie or plugin sources used only for compatibility context
+## Components
+### Header and Navigation
+- Keep ATI as the only primary brand mark.
+- Top utility and footer iconography should use ATI sand on dark or white surfaces.
+- Breadcrumb bars should use ATI sand backgrounds with `primary-700` hover or emphasis text where needed.
+- Sticky menus should preserve plugin-safe `primary`, `contrast`, and `base` relationships.
 
-Do not guess when these sources disagree. Call out the conflict and ask which source should win.
+### Buttons
+- Primary buttons:
+  sand background, dark text, uppercase Forum, `15px` radius
+- Hover state:
+  rust background, white text
+- Secondary or outline actions:
+  white or transparent surface with sand border and sand text, then rust on hover
 
-## Working Style
+### Forms
+- Inputs:
+  white surface
+  dark text
+  `15px` radius
+  sand border
+- Validation:
+  use `error-text`, `error-background`, and `error-border` as implementation support tokens rather than core brand accents
 
-- Prefer small, targeted updates over broad refactors.
-- Inspect affected files before proposing or making changes.
-- Keep implementation aligned to ATI evidence, not duplicated GoAfrica defaults.
-- Treat unresolved spacing, width, or shadow values as provisional unless `DESIGN.md` confirms them.
-- Preserve existing WordPress block-theme structures unless there is a clear ATI reason to change them.
+### Tour Operator Cards and Meta Blocks
+- Preserve ATI’s dark-card treatment:
+  charcoal panel backgrounds
+  white text
+  sand accents and borders
+- Review sections should use `primary-200` as the light warm background role.
+- Meta panels and informational wrappers should use light ATI surfaces and border tokens rather than inherited GoAfrica or Ollie colors.
 
-## Required Task Flow
-
-For design, styling, template, or metadata work:
-
-1. Read `DESIGN.md` first.
-2. Summarize the relevant ATI tokens, typography, spacing, and acceptance criteria.
-3. Inspect the affected files.
-4. Identify inherited GoAfrica or generic Ollie drift.
-5. Make the smallest effective ATI-aligned change.
-6. Explain any provisional values or unresolved evidence.
-
-If `DESIGN.md` is missing, say so plainly before making high-confidence design decisions.
-
-## ATI Retheme Priorities
-
-Prioritize the following work:
-
-- replace copied GoAfrica naming in `style.css`, `readme.txt`, `Text Domain`, asset handles, namespaces, and pattern references
-- replace copied palette values with ATI sand, rust, charcoal, white, and supporting tokens from `DESIGN.md`
-- replace inherited `Mona Sans` and `Poppins` with ATI `Forum` typography where the design contract calls for it
-- preserve ATI dark-card styling for Tour Operator blocks and related meta surfaces
-- make theme metadata ATI-specific
-- review the repository for placeholder values left behind from the duplicated source theme
-
-## Known Drift To Fix First
-
-These are first-pass remediation targets unless the repository has already corrected them:
-
-- `style.css` still says `Theme Name: Go Africa Ollie Child`
-- `style.css` still says `Description: A child theme of the Ollie theme for GoAfrica.nl`
-- `style.css` still uses `Text Domain: go-africa-ollie-child`
-- `readme.txt` still uses the `go-africa-ollie-child` slug and GoAfrica description
-- `functions.php` still uses `goafrica_*` function names and handles
-- `style.css` may reference tokens such as `primary-alt` and `primary-alt-accent` that need to be checked against `DESIGN.md`
-
-Treat these as concrete cleanup items, not optional polish.
-
-## WordPress Block Theme Rules
-
-- Prefer `theme.json` for shared design-token ownership and reusable styling decisions.
-- Check `styles/**/*.json` before hardcoding variation-specific values.
-- Inspect `templates/**/*.html`, `parts/**/*.html`, and `patterns/**/*` for block markup and duplicated content drift.
-- Inspect `functions.php`, `inc/**/*.php`, `style.css`, `src/scss/**/*`, and `assets/css/**/*` as needed.
-- If `src/scss/` exists, treat it as the styling source layer and avoid hand-editing compiled CSS unless no source file exists.
-- Keep block markup, template structure, and pattern composition compatible with the editor.
-- Do not flatten modular `theme.json` data or style-variation structures unless the code proves they are unused.
-
-## Theme Token Rules
-
-- Keep ATI semantic tokens and required compatibility aliases both available when `DESIGN.md` supports both layers.
-- Prefer WordPress preset variables over raw hex values when an existing preset is the correct source.
-- Do not remove compatibility slugs just because they appear duplicative.
-- Flag token drift clearly when implementation uses a token not represented in `DESIGN.md`.
-- Avoid introducing new brand tokens without ATI evidence.
-
-## Tour Operator Compatibility
-
-This theme is expected to work closely with `lightspeedwp/tour-operator` block output.
-
-Agents should:
-
-- preserve required palette and spacing slugs used by Tour Operator templates and patterns
-- review cards, meta blocks, review sections, and archive surfaces against ATI dark-card guidance in `DESIGN.md`
-- preserve or improve contrast and semantic structure
-- avoid generic restyling that erases ATI's stronger hospitality and travel visual language
-
-Pay special attention to these compatibility slugs when `DESIGN.md` includes them:
-
-- `primary`
-- `contrast`
-- `base`
-- `primary-700`
-- `primary-200`
-- `border-light`
-- `border-dark`
-- spacing `10` through `80`
-
-Important usage patterns:
-
-- breadcrumbs often depend on `primary` with `primary-700` hover text
-- sticky menus often depend on `primary`, `contrast`, and `base`
-- review sections often depend on `primary-200`
-- cards, modals, and fast-fact panels often depend on numeric spacing presets
-
-## Priority Files And Areas
-
-Common files and areas to inspect first:
-
-- `theme.json`
-- `styles/**/*.json`
-- `style.css`
-- `readme.txt`
-- `functions.php`
-- `templates/**/*.html`
-- `parts/**/*.html`
-- `patterns/**/*`
-- `src/scss/**/*`
-- `assets/css/**/*`
-
-When Tour Operator template overrides or related pattern files exist, check them carefully before changing shared tokens.
-
-## Accessibility And Quality
-
-- Preserve or improve text contrast, especially on sand, rust, and charcoal surfaces.
-- Check hover, focus, and active states when changing button or navigation colors.
-- Avoid shipping changes that only work on the front end but break editor presentation.
-- Prefer additive fixes that keep the theme maintainable for future ATI work.
-
-## Escalation Rules
-
-Stop and ask for confirmation when:
-
-- `DESIGN.md` is missing
-- the design contract appears outdated relative to the repository
-- a requested change conflicts with ATI design evidence
-- the change would affect security, billing, auth, destructive actions, or data integrity
-- the change would require a broad refactor without clear design justification
-- a proposed token, spacing value, or shadow choice is not supported by ATI evidence
-
-Suggested escalation wording:
-
-`I found a mismatch between the ATI design contract, the current repository state, and the requested change. Please confirm which source should win before I continue.`
-
-## Output Expectations
-
-For design-driven work, prefer responses that include:
-
-1. the relevant ATI design summary
-2. implementation drift found
-3. the recommended repository update
-4. risks, assumptions, or unresolved evidence
-5. any validation still needed in the browser or editor
-
-Do not present copied GoAfrica values as ATI truth.
+## Do's and Don'ts
+- Do replace all remaining GoAfrica names, palette values, and references.
+- Do preserve Tour Operator compatibility slugs and numeric spacing presets.
+- Do keep ATI’s serif-led, elegant, warm visual tone.
+- Do use `#262423` intentionally for emphasis and hover-dark cases rather than leaving it undefined.
+- Don't inherit Ollie lavender, blue, or neon-style defaults.
+- Don't remove `primary-700`, `primary-200`, or `contrast` because they look duplicative.
+- Don't treat copied theme values as ATI truth when ATI evidence disagrees.
+- Don't flatten ATI into a generic Ollie palette or sans-serif system.
