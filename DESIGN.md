@@ -128,9 +128,10 @@ components:
 ## Colors
 
 - Verified ATI brand colors:
-  `primary` and `brand-sand` = `#DBBD8D`
-  `primary-accent` and `brand-rust` = `#AA653C`
-  `main` and `brand-charcoal` = `#231F20`
+  `primary` = `#DBBD8D`
+  `primary-accent` = `#AA653C`
+  `main` and `contrast` = `#231F20`
+  `primary-700` and `ink` = `#262423`
   `base` = `#FFFFFF`
   `ink` = `#262423`
   `error` = `#A94442`
