@@ -2,7 +2,7 @@
 	'use strict';
 
 	function initFaqAccordions() {
-		document.querySelectorAll( '.is-style-ga-faq-accordion .schema-faq-section' ).forEach( function ( section ) {
+		document.querySelectorAll( '.is-style-ati-faq-accordion .schema-faq-section' ).forEach( function ( section ) {
 			var question = section.querySelector( '.schema-faq-question' );
 			var answer   = section.querySelector( '.schema-faq-answer' );
 
@@ -19,10 +19,10 @@
 
 				if ( isOpen ) {
 					section.classList.remove( 'is-open' );
-					section.style.removeProperty( '--ga-faq-answer-height' );
+					section.style.removeProperty( '--ati-faq-answer-height' );
 					question.setAttribute( 'aria-expanded', 'false' );
 				} else {
-					section.style.setProperty( '--ga-faq-answer-height', answer.scrollHeight + 'px' );
+					section.style.setProperty( '--ati-faq-answer-height', answer.scrollHeight + 'px' );
 					section.classList.add( 'is-open' );
 					question.setAttribute( 'aria-expanded', 'true' );
 				}

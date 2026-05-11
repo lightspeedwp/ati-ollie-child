@@ -1,8 +1,8 @@
 {
 	"$schema": "https://schemas.wp.org/wp/6.9/theme.json",
 	"version": 3,
-	"title": "GA Travel Style Card",
-	"slug": "ga-travel-style-card",
+	"title": "ATI Travel Style Card",
+	"slug": "ati-travel-style-card",
 	"blockTypes": [
 		"core/cover"
 	],

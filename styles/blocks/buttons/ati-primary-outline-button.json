@@ -1,12 +1,12 @@
 {
 	"$schema": "https://schemas.wp.org/wp/6.9/theme.json",
 	"version": 3,
-	"title": "GA Primary Outline",
-	"slug": "ga-primary-outline-button",
+	"title": "ATI Primary Outline",
+	"slug": "ati-primary-outline-button",
 	"blockTypes": [
 		"core/button"
 	],
-	"description": "GoAfrica Primary Outline button",
+	"description": "ATI Primary Outline button",
 	"styles": {
 		"border": {
 			"radius": "var:preset|border-radius|sm",
@@ -19,7 +19,7 @@
 			"text": "var:preset|color|primary"
 		},
 		"typography": {
-			"fontSize": "var:preset|font-size|base",
+			"fontSize": "var:preset|font-size|button-md",
 			"fontWeight": "600",
 			"letterSpacing": "1px"
 		},

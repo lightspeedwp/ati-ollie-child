@@ -18,7 +18,7 @@ Current ATI defaults from `DESIGN.md`:
 
 Policy:
 
-- replace inherited GoAfrica greens, orange-reds, and sans-serif font stacks
+- replace inherited legacy greens, orange-reds, and sans-serif font stacks
 - prefer semantic token mapping over raw repeated literals
 - preserve ATI dark-card treatment for Tour Operator surfaces
 - keep `theme.json` and related style files aligned with the ATI token names and values in `DESIGN.md`

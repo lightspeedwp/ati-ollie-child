@@ -1,8 +1,8 @@
 {
 	"$schema": "https://schemas.wp.org/wp/6.9/theme.json",
 	"version": 3,
-	"title": "GA Cover Hover Zoom",
-	"slug": "ga-cover-hover-zoom",
+	"title": "ATI Cover Hover Zoom",
+	"slug": "ati-cover-hover-zoom",
 	"blockTypes": [
 		"core/cover"
 	],
