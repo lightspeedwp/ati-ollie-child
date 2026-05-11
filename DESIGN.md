@@ -17,13 +17,19 @@ colors:
   tertiary: "#F8F7F3"
   border-light: "#E8E1D8"
   border-dark: "#8E8479"
-  support-gold: "#BAAC2F"
-  support-red: "#B92A02"
-  support-sky: "#BEDCF8"
+  error: "#A94442"
   error-text: "#A94442"
   error-background: "#F2DEDE"
   error-border: "#EBCCD1"
+  brand-sand: "#DBBD8D"
+  brand-rust: "#AA653C"
+  brand-charcoal: "#231F20"
 typography:
+  body-sm:
+    fontFamily: Forum
+    fontSize: 12px
+    fontWeight: 400
+    lineHeight: 16px
   body-md:
     fontFamily: Forum
     fontSize: 16px
@@ -31,30 +37,30 @@ typography:
     lineHeight: 24px
   nav-md:
     fontFamily: Forum
-    fontSize: 17px
+    fontSize: 16px
     fontWeight: 600
     lineHeight: 24px
   button-md:
     fontFamily: Forum
-    fontSize: 18px
+    fontSize: 16px
     fontWeight: 400
     lineHeight: 24px
     letterSpacing: 0.6px
   heading-xl:
     fontFamily: Forum
-    fontSize: 54px
+    fontSize: 56px
     fontWeight: 600
-    lineHeight: 66px
+    lineHeight: 64px
   heading-lg:
     fontFamily: Forum
-    fontSize: 36px
+    fontSize: 40px
     fontWeight: 600
-    lineHeight: 44px
+    lineHeight: 48px
   heading-md:
     fontFamily: Forum
     fontSize: 24px
     fontWeight: 600
-    lineHeight: 34px
+    lineHeight: 32px
 rounded:
   xs: 4px
   sm: 8px
@@ -90,15 +96,10 @@ components:
     typography: "{typography.nav-md}"
     padding: "{spacing.20}"
   sticky-menu:
-    backgroundColor: "{colors.contrast}"
+    backgroundColor: "{colors.main}"
     textColor: "{colors.base}"
     typography: "{typography.nav-md}"
     padding: "{spacing.20}"
-  review-section:
-    backgroundColor: "{colors.primary-200}"
-    textColor: "{colors.main}"
-    typography: "{typography.body-md}"
-    padding: "{spacing.50}"
   card-dark:
     backgroundColor: "{colors.main}"
     textColor: "{colors.base}"
@@ -115,47 +116,72 @@ components:
 # ATI Holidays Design Contract
 
 ## Overview
+
 - Primary mode: `update-existing`
 - This package is the ATI Holidays source-of-truth design brief for the Ollie-based block theme rebuild and Tour Operator integration.
-- The design system must preserve ATI’s established brand language instead of inheriting copied GoAfrica or upstream Ollie defaults.
+- The design system should preserve ATI’s established brand language consistently across theme, patterns, and plugin-facing surfaces.
 - Highest-confidence ATI evidence comes from the ATI block-theme project document, ATI Figma design system, and legacy ATI LSX child implementation.
-- Use `/workspace/output/ati-holidays-theme.json` as the exact implementation companion for this document.
+- Use `/workspace/output/ati-holidays-theme.json` as the implementation companion for this document.
+- `DESIGN.md` defines ATI source-of-truth design tokens.
+- `theme.json` should stay aligned to the fuller approved ATI working palette defined here.
 
 ## Colors
+
 - Verified ATI brand colors:
-  `primary` = `#DBBD8D`
-  `primary-accent` = `#AA653C`
-  `main` and `contrast` = `#231F20`
-  `primary-700` and `ink` = `#262423`
+  `primary` and `brand-sand` = `#DBBD8D`
+  `primary-accent` and `brand-rust` = `#AA653C`
+  `main` and `brand-charcoal` = `#231F20`
   `base` = `#FFFFFF`
-- Verified supporting system colors:
+  `ink` = `#262423`
+  `error` = `#A94442`
+- Approved supporting and alias tokens:
+  `primary-alt` = `#AA653C`
+  `primary-alt-accent` = `#7C2D12`
   `primary-200` and `tertiary` = `#F8F7F3`
+  `primary-700` = `#262423`
+  `contrast` = `#231F20`
+  `secondary` = `#5C5652`
   `border-light` = `#E8E1D8`
   `border-dark` = `#8E8479`
-- Compatibility note:
-  Tour Operator templates require `primary`, `contrast`, `base`, `primary-700`, and `primary-200` to exist as resolvable palette slugs.
+  `error-text` = `#A94442`
+  `error-background` = `#F2DEDE`
+  `error-border` = `#EBCCD1`
+- Design contract rule:
+  these colors define the approved ATI working palette for this package
+  aliases, support colors, and state colors are intentionally part of the design system when listed here
 - Usage intent:
   use sand for default calls to action, utility accents, and borders
   use rust for hover and stronger action emphasis
   use charcoal for dark surfaces and primary contrast roles
   use `#262423` for deeper text emphasis, breadcrumb hover text, and dark-on-light compatibility cases
+  use `#F8F7F3` for soft light-surface roles where a warmer neutral is preferred over pure white
+  use `#E8E1D8` and `#8E8479` for border hierarchy and light structural separation
 
 ## Typography
+
 - ATI uses `Forum` across headings, body copy, navigation, and buttons.
-- Verified desktop typography:
-  `heading-xl` = `54/66`
-  `heading-lg` = `36/44`
-  `heading-md` = `24/34`
+- Approved typography system:
+  `body-sm` = `12/16`
   `body-md` = `16/24`
-  `nav-md` = `17/24`
-  `button-md` = `18/24`, uppercase, `0.6px` letter spacing
-- Migration requirement:
-  remove inherited `Mona Sans` and `Poppins` usage from ATI-facing theme output.
+  `nav-md` = `16/24`
+  `button-md` = `16/24`, uppercase, `0.6px` letter spacing
+  `heading-md` = `24/32`
+  `heading-lg` = `40/48`
+  `heading-xl` = `56/64`
+- System rule:
+  the typography scale should follow an 8pt rhythm wherever practical
+  `12px` is the approved small exception for rare compact text
+- Typography requirement:
+  keep `Forum` active across ATI-facing theme output where the design contract applies.
 
 ## Layout & Spacing
+
 - Current child-theme layout baseline:
   `contentSize: 800px`
   `wideSize: 1320px`
+- Theme implementation alignment:
+  `theme.json` may expose both numeric spacing presets and named spacing presets at the same time
+  the numeric preset ladder exists for shared block and plugin compatibility
 - Tour Operator compatibility spacing ladder:
   `10` = `10px`
   `20` = `20px`
@@ -171,24 +197,30 @@ components:
   keep the numeric preset slugs in `theme.json` even if named spacing tokens such as `small` and `medium` are also present.
 
 ## Elevation
+
 - No ATI-specific shadow system is verified strongly enough to treat as brand-defining.
 - Prefer borders, surface contrast, and spacing over decorative shadow use.
 - Any retained inherited shadow preset should be treated as secondary implementation support rather than ATI visual identity.
 
 ## Shapes
+
 - ATI’s primary control radius is `15px`.
 - Use `15px` for branded buttons, form controls, and modal actions.
 - Tour Operator patterns also use smaller inherited radii such as `4px`, `8px`, and `0.5rem`.
 - Normalize where practical, but do not break block or plugin layouts to force a single radius everywhere.
 
 ## Components
+
 ### Header and Navigation
+
 - Keep ATI as the only primary brand mark.
 - Top utility and footer iconography should use ATI sand on dark or white surfaces.
-- Breadcrumb bars should use ATI sand backgrounds with `primary-700` hover or emphasis text where needed.
-- Sticky menus should preserve plugin-safe `primary`, `contrast`, and `base` relationships.
+- Breadcrumb bars should use ATI sand backgrounds with `ink` for darker hover or emphasis text where needed.
+- Sticky menus should preserve dark ATI surfaces with white text.
+- If implementation uses aliases such as `contrast` or `primary-700`, those aliases should still resolve back to ATI charcoal or deep-dark values.
 
 ### Buttons
+
 - Primary buttons:
   sand background, dark text, uppercase Forum, `15px` radius
 - Hover state:
@@ -197,28 +229,31 @@ components:
   white or transparent surface with sand border and sand text, then rust on hover
 
 ### Forms
+
 - Inputs:
   white surface
   dark text
   `15px` radius
-  sand border
+  sand or light-border treatment when a border token is needed
 - Validation:
-  use `error-text`, `error-background`, and `error-border` as implementation support tokens rather than core brand accents
+  use `error` as the only validated error-state color in this package unless newer ATI evidence expands the system
+  `error-text`, `error-background`, and `error-border` may be implemented when needed if they remain visually anchored to the approved ATI palette and accessibility requirements
 
 ### Tour Operator Cards and Meta Blocks
+
 - Preserve ATI’s dark-card treatment:
   charcoal panel backgrounds
   white text
   sand accents and borders
-- Review sections should use `primary-200` as the light warm background role.
-- Meta panels and informational wrappers should use light ATI surfaces and border tokens rather than inherited GoAfrica or Ollie colors.
+- Meta panels and informational wrappers can use `primary-200`, `tertiary`, `border-light`, and `border-dark` as approved ATI support tokens for softer structural styling.
 
 ## Do's and Don'ts
-- Do replace all remaining GoAfrica names, palette values, and references.
-- Do preserve Tour Operator compatibility slugs and numeric spacing presets.
+
+- Do preserve Tour Operator compatibility slugs and numeric spacing presets, but map those slugs back to ATI-approved colors only.
 - Do keep ATI’s serif-led, elegant, warm visual tone.
 - Do use `#262423` intentionally for emphasis and hover-dark cases rather than leaving it undefined.
+- Do keep `DESIGN.md` and `theme.json` aligned on the approved ATI working palette.
 - Don't inherit Ollie lavender, blue, or neon-style defaults.
-- Don't remove `primary-700`, `primary-200`, or `contrast` because they look duplicative.
-- Don't treat copied theme values as ATI truth when ATI evidence disagrees.
+- Don't introduce extra palette colors into `DESIGN.md` unless ATI evidence or an approved system decision supports them directly.
+- Don't treat outdated theme values as ATI truth when ATI evidence disagrees.
 - Don't flatten ATI into a generic Ollie palette or sans-serif system.
