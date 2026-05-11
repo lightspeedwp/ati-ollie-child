@@ -19,7 +19,7 @@
 			"text": "var:preset|color|primary"
 		},
 		"typography": {
-			"fontSize": "var:preset|font-size|base",
+			"fontSize": "var:preset|font-size|button-md",
 			"fontWeight": "600",
 			"letterSpacing": "1px"
 		},
